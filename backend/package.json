@@ -1,0 +1,20 @@
+{
+  "name": "fsevents_brahmavar",
+  "version": "1.0.0",
+  "description": "An event management organization which helps in planning a succeddful function such as wedding, reception, birthday day celibrations, and all kinds of small parties too..contact us for more.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "express": "^4.18.2",
+    "js": "^0.1.0",
+    "moongoose": "^0.0.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
