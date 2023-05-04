@@ -1,8 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { Headers } from './Headers'
+import { useEffect } from 'react'
 
 export const Testimonial = () => {
+   useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
   return (
     <>
     <Headers title= {"Testimonial"}/>
@@ -11,7 +15,7 @@ export const Testimonial = () => {
        <div class="row">
           <div class="col-md-12">
              <div class="titlepage">
-                <h2>People Says About Farm</h2>
+               <center> <h2>People Says About us</h2> </center>
              </div>
           </div>
        </div>
@@ -30,9 +34,8 @@ export const Testimonial = () => {
                             <div class="row">
                                <div class="col-md-12">
                                   <div class="test_box">
-                                     <i><img src="img/testimonial-3.jpg" alt="#"/></i>
-                                     <h4>jhone Du</h4>
-                                     <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,</p>
+                                     <h4>Arjun K</h4>
+                                     <p> “I recently hired this FS Event management team for my wedding, and I cannot recommend them enough! From the very beginning, they  took the time to listen to my vision and understand what was important to me. I was able to relax and enjoy my special day knowing that everything was in capable hands. Thank you so much for making my wedding dreams a reality!” </p>
                                   </div>
                                </div>
                             </div>
@@ -45,9 +48,8 @@ export const Testimonial = () => {
                             <div class="row">
                                <div class="col-md-12">
                                   <div class="test_box">
-                                     <i><img src="img/testimonial-2.jpg" alt="#"/></i>
-                                     <h4>jhone Du</h4>
-                                     <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,</p>
+                                     <h4>Aman</h4>
+                                     <p> “I organized a corporate conference for my company and reached out to the FS Event management team for their services. I was blown away by their professionalism, expertise, and attention to detail. They took care of every aspect of the event, from venue selection to vendor coordination, and even managed last-minute changes with ease. Their level of service is unparalleled, and they truly go above and beyond to ensure that every aspect of your event is expected seamlessly.” </p>
                                   </div>
                                </div>
                             </div>
@@ -60,9 +62,8 @@ export const Testimonial = () => {
                             <div class="row">
                                <div class="col-md-12">
                                   <div class="test_box">
-                                     <i><img src="img/testimonial-1.jpg" alt="#"/></i>
-                                     <h4>jhone Du</h4>
-                                     <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,</p>
+                                     <h4>Anrica Neola</h4>
+                                     <p>“I hired this FS Event management team to plan my daughter’s sweet 16 party, and I was blown away by their creativity and attention to detail. They took my daughter’s vision and turned it into a stunning reality, with beautiful decor, delicious food, and fun activities for all the guests. The party was a huge success, and my daughter and her friends are still talking about it! I couldn’t have asked for a better event management team to bring my daughter’s dream party to life. Thank you so much for making it a night to remember!”                                  </p>
                                   </div>
                                </div>
                             </div>
@@ -70,6 +71,8 @@ export const Testimonial = () => {
                       </div>
                    </div>
                 </div>
+                <br/>
+                
                 <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="sr-only">Previous</span>

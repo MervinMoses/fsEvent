@@ -5,7 +5,11 @@ const { body, validationResult } = require('express-validator');
 
 
 router.post('/getQuote', [
+    body('name','enter a name').isAlpha(),
+    body('name','cant be empty').notEmpty(),
+    body('email','cant be empty').notEmpty(),
     body('email', 'Enter a valid email').isEmail(),
+    
   ], async (req, res) => {
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
@@ -14,12 +18,14 @@ router.post('/getQuote', [
       try{
       const connect = await GetQuote.create({
       name: req.body.name,
-      mobile: req.body.email,
       email: req.body.email,
+      mobile: req.body.mobile,
       venue:  req.body.venue,
-      sEvent: req.body.sEvent,
-      nGuest: req.body.nGuest,
+      tEvent: req.body.tEvent,
       eDate: req.body.eDate,
+      budget:req.body.budget,
+      nGuest: req.body.nGuest,
+
       comments: req.body.comments,
       });        
       console.log(req.body)

@@ -10,7 +10,7 @@ const getQuote=require('./routers/getQuoteR')
 const cors=require('cors')
 
 const app=express()
-// app.use(cors())
+app.use(cors())
 
 
 app.use(bodyparser.urlencoded({extended:true}))
@@ -22,7 +22,7 @@ const Host=process.env.Host;
 
 
 app.use('/',routs)
-app.use('/get',getQuote)
+app.use('/',getQuote)
 
 
 

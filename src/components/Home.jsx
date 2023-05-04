@@ -1,11 +1,16 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { About } from "./About";
 import { Gallery } from "./Gallery";
 import { Service } from "./Service";
 import { Happyclient } from "./Happyclient";
+import { useEffect } from 'react'
+
 
 export const Home = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <div
@@ -30,13 +35,13 @@ export const Home = () => {
                   Decorate Your Destination
                 </h1>
                 <Link
-                  to="quote.html"
+                  to="/ConnectWithUs"
                   className="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft"
                 >
                   Free Quote
                 </Link>
                 <Link
-                  to=""
+                  to="/Contact"
                   className="btn btn-outline-light py-md-3 px-md-5 animated slideInRight"
                 >
                   Contact With Us
@@ -45,7 +50,7 @@ export const Home = () => {
             </div>
           </div>
           <div className="carousel-item">
-            <img className="w-100" src="/img/1.jpg" alt="img" />
+            <img className="w-100" src="/img/40.jpg" alt="img" />
             <div className="carousel-caption d-flex flex-column align-items-center justify-content-center">
               <div className="p-1">
                 <h5 className="text-white text-uppercase mb-3 animated slideInDown">
@@ -54,18 +59,18 @@ export const Home = () => {
                 <h1 className="display-1 text-white mb-md-4 animated zoomIn">
                   Decorate Your Destination
                 </h1>
-                <Link
-                  to="quote.html"
+                <NavLink
+                  to="/ConnectWithUs"
                   className="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft"
                 >
                   Free Quote
-                </Link>
-                <Link
-                  to=""
+                </NavLink>
+                <NavLink
+                  to="/Contact"
                   className="btn btn-outline-light py-md-3 px-md-5 animated slideInRight"
                 >
                   Contact With Us
-                </Link>
+                </NavLink>
               </div>
             </div>
           </div>
@@ -95,71 +100,87 @@ export const Home = () => {
           <span className="visually-hidden">Next</span>
         </button>
       </div>
+      <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
       <section className="fruit_section layout_padding">
         <div className="container mx-6">
           <div className="section-title text-center position-relative pb-3 mb-5 mx-auto">
-            <h1 className="mb-0">We provide:</h1>
+            <h1 className="mb-0">We provide</h1>
           </div>
         </div>
         <div className="container-fluid">
           <div className="fruit_container">
+          <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.3s">
             <div className="box">
               <img src="/img/11.jpg" alt="" />
               <div className="link_box">
                 <h5>
                   <b>Wedding</b>
                 </h5>
-                <Link to="">Read More</Link>
+                <Link to="/Wedding">Explore</Link>
               </div>
             </div>
+          </div>
+          <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.6s">
             <div className="box">
               <img src="/img/10.jpg" alt="" />
               <div className="link_box">
                 <h5>
                   <b>Birthday</b>
                 </h5>
-                <Link to="">Read More</Link>
+                <Link to="/Bday">Explore</Link>
+              </div>
               </div>
             </div>
+            <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.9s">
+
             <div className="box">
               <img src="/img/37.jpg" alt="" />
               <div className="link_box">
                 <h5>
                   <b>Reception</b>
                 </h5>
-                <Link to="">Read More</Link>
+                <Link to="/Reception">Explore</Link>
+              </div>
               </div>
             </div>
+            <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.3s">
             <div className="box">
-              <img src="/img/18.jpg" alt="" />
-              <div className="link_box">
-                <h5>
-                  <b>Orchestra</b>
+            <img src="/img/temple.jpg" alt=""/>
+          <div className="link_box">
+            <h5><b>
+              Temple Decoration
+              </b>
                 </h5>
-                <Link to="">Read More</Link>
+                <Link to="/Temple">Explore</Link>
+              </div>
               </div>
             </div>
+            <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.6s">
             <div className="box">
               <img src="/img/8.jpg" alt="" />
               <div className="link_box">
                 <h5>
-                  <b>Haladi</b>
+                  <b>Haldi</b>
                 </h5>
-                <Link to="">Read More</Link>
+                <Link to="/Haldi">Explore</Link>
+              </div>
               </div>
             </div>
+            <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.9s">
             <div className="box">
-              <img src="/img/team-1.jpg" alt="" />
-              <div className="link_box">
-                <h5>
-                  <b>Car Decoration</b>
-                </h5>
-                <Link to="">Read More</Link>
+            <img src="/img/mini.jpg" alt=""/>
+          <div className="link_box">
+            <h5><b>
+              Mini Party & Get2gether</b>              </h5>
+                <Link to="/CarDecoration">Explore</Link>
               </div>
+            </div>
             </div>
           </div>
         </div>
+        
       </section>
+      </div>
       {/* 
 <div className="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div className="container py-5">
@@ -246,87 +267,32 @@ export const Home = () => {
         </div>
     </div> */}
 
-      <div className="container mx-6">
-        <div className="section-title text-center position-relative pb-3 mb-5 mx-auto">
-          <h1 className="mb-0">About us:</h1>
-        </div>
-      </div>
-      <div className="row align-items-center pb-1">
-        <div className="col-lg-5">
-          <img className="img-thumbnail p-3" src="/img/3.jpg" alt="" />
-        </div>
-        <div className="col-lg-7 mt-5 mt-lg-0">
-          <small className="bg-primary text-white text-uppercase font-weight-bold px-1">
-            Who We Are
-          </small>
-          <h1 className="mt-2 mb-4">
-            Most Effective Creative Service Provider For Companies
-          </h1>
-          <p className="mb-4">
-            Eirmod est dolor nonumy sea amet dolore erat sit dolor et dolor
-            vero. Tempor ipsum at justo amet at ipsum justo. Aiam kasd sea sit
-            dolor duo elitr dolor amet, justo est ipsum amet dolor ut ipsum.
-            Labore diam et nonumy amet dolores. Volup sit labore dolores erat,
-            magna justo sed lorem kasd ea dolor. Labore sit clita invidunt, est
-            dolores lorem sed ipsum kasd no amet ipsum.
-          </p>
-          <Link
-            to="/About"
-            className="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold"
-          >
-            Read More
-          </Link>
-        </div>
-      </div>
-      <div className="row mt-4">
-        <div className="col-md-4">
-          <div
-            className="d-flex align-items-center border mb-4 mb-lg-0 p-4"
-            style={{ height: "120px" }}
-          >
-            <i className="fa fa-2x fa-map-marker-alt text-primary mr-3"></i>
-            <div className="d-flex flex-column">
-              <h5 className="font-weight-bold">Our Office</h5>
-              <p className="m-0">123 Street, New York, USA</p>
-            </div>
-          </div>
-        </div>
-        <div className="col-md-4">
-          <div
-            className="d-flex align-items-center border mb-4 mb-lg-0 p-4"
-            style={{ height: "120px" }}
-          >
-            <i className="fa fa-2x fa-envelope-open text-primary mr-3"></i>
-            <div className="d-flex flex-column">
-              <h5 className="font-weight-bold">Email Us</h5>
-              <p className="m-0">info@example.com</p>
-            </div>
-          </div>
-        </div>
+      <div className="container-fluid py-5">
+        <div className="container">
+            <div className="row align-items-center pb-1">
+            <div className="section-title text-center position-relative pb-3 mb-5 mx-auto">
 
-        <div className="col-md-4">
-          <div
-            className="d-flex align-items-center border mb-4 mb-lg-0 p-4"
-            style={{ height: "120px" }}
-          >
-            <i className="fas fa-2x fa-phone-alt text-primary mr-3"></i>
-            <div className="d-flex flex-column">
-              <h5 className="font-weight-bold">Call Us</h5>
-              <p className="m-0">+012 345 6789</p>
-            </div>
-          </div>
+                    <center><h1 className="mt-2 mb-4" style={{ fontSize: '50px' }}>Who Are We</h1></center>
+                    </div>
+                    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.3s">
+
+                    <p className="mb-4">Whether you’re a seasoned event organizer or putting together an event for the first time, a professional event planner goes a long way to making sure your event is the best it can be.Our mission is to bring your vision to life and create an event that reflects your personality,style,and goals. V3 Events is able to plan small and large-scale events down to the minute details, meticulously organizing every aspect to make sure that your special day or night runs without a hitch. 
+Our trained and skilled event planners have the right expertise to make your event more spectacular with more than 15 years of full-time experience in the event management & Wedding Planning industry, we are serving our customers with the best possible services delivered at the best possible rates. We are a one stop hub for all your event & Wedding Planning related requirements. Starting from venue Selection hotels booking, hospitality, decor recommendation, catering, and celebrity management to entertainment options, we deal with everything which is required for making your event a memorable one. With years of experience in the industry, we have developed a deep understanding of what it takes to execute successful events, from corporate conferences and product launches to weddings and social gatherings. Our services include event planning, design and decor,vendor coordination,logistics management, and on-site coordination. Thank you for considering our event management services. We look forward to creating an unforgettable event with you!
+</p>
+                </div>
+           </div>
         </div>
-      </div>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <div className="container mx-6">
+    </div>
+     
+            <div className="container mx-6">
         <div className="section-title text-center position-relative pb-3 mb-5 mx-auto">
         <h1 className="mb-0">People Say About Us</h1>
         </div>
+        <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.3s">
+
           <div class="about">
               <div class="row mt-6">
+
                 <div class="col-md-14">
                   <div
                     id="myCarousel"
@@ -349,27 +315,10 @@ export const Home = () => {
                             <div class="row">
                               <div class="col-md-12">
                                 <div class="test_box">
-                                  <i>
-                                    <img src="img/testimonial-3.jpg" alt="#" />
-                                  </i>
-                                  <h4>jhone Du</h4>
+                                 
+                                  <h4></h4>
                                   <p>
-                                    It is a long established fact that a reader
-                                    will be distracted by the readable content
-                                    of a page when looking at its layout. The
-                                    point of using Lorem Ipsum is that it has a
-                                    more-or-less normal distribution of
-                                    letters,It is a long established fact that a
-                                    reader will be distracted by the readable
-                                    content of a page when looking at its
-                                    layout. The point of using Lorem Ipsum is
-                                    that it has a more-or-less normal
-                                    distribution of letters,It is a long
-                                    established fact that a reader will be
-                                    distracted by the readable content of a page
-                                    when looking at its layout. The point of
-                                    using Lorem Ipsum is that it has a
-                                    more-or-less normal distribution of letters,
+                                  “I recently hired this FS Event management team for my wedding, and I cannot recommend them enough! From the very beginning, they  took the time to listen to my vision and understand what was important to me. I was able to relax and enjoy my special day knowing that everything was in capable hands. Thank you so much for making my wedding dreams a reality!” 
                                   </p>
                                 </div>
                               </div>
@@ -383,28 +332,10 @@ export const Home = () => {
                             <div class="row mt-4">
                               <div class="col-md-12">
                                 <div class="test_box">
-                                  <i>
-                                    <img src="img/testimonial-2.jpg" alt="#" />
-                                  </i>
-                                  <h4>jhone Du</h4>
+                                  
+                                  <h4>Aman</h4>
                                   <p>
-                                    It is a long established fact that a reader
-                                    will be distracted by the readable content
-                                    of a page when looking at its layout. The
-                                    point of using Lorem Ipsum is that it has a
-                                    more-or-less normal distribution of
-                                    letters,It is a long established fact that a
-                                    reader will be distracted by the readable
-                                    content of a page when looking at its
-                                    layout. The point of using Lorem Ipsum is
-                                    that it has a more-or-less normal
-                                    distribution of letters,It is a long
-                                    established fact that a reader will be
-                                    distracted by the readable content of a page
-                                    when looking at its layout. The point of
-                                    using Lorem Ipsum is that it has a
-                                    more-or-less normal distribution of letters,
-                                  </p>
+                                  “I organized a corporate conference for my company and reached out to the FS Event management team for their services. I was blown away by their professionalism, expertise, and attention to detail. They took care of every aspect of the event, from venue selection to vendor coordination, and even managed last-minute changes with ease. Their level of service is unparalleled, and they truly go above and beyond to ensure that every aspect of your event is expected seamlessly.” </p>
                                 </div>
                               </div>
                             </div>
@@ -417,28 +348,10 @@ export const Home = () => {
                             <div class="row mt-4">
                               <div class="col-md-12">
                                 <div class="test_box">
-                                  <i>
-                                    <img src="img/testimonial-1.jpg" alt="#" />
-                                  </i>
-                                  <h4>jhone Du</h4>
+                                 
+                                  <h4>Anrica Neola</h4>
                                   <p>
-                                    It is a long established fact that a reader
-                                    will be distracted by the readable content
-                                    of a page when looking at its layout. The
-                                    point of using Lorem Ipsum is that it has a
-                                    more-or-less normal distribution of
-                                    letters,It is a long established fact that a
-                                    reader will be distracted by the readable
-                                    content of a page when looking at its
-                                    layout. The point of using Lorem Ipsum is
-                                    that it has a more-or-less normal
-                                    distribution of letters,It is a long
-                                    established fact that a reader will be
-                                    distracted by the readable content of a page
-                                    when looking at its layout. The point of
-                                    using Lorem Ipsum is that it has a
-                                    more-or-less normal distribution of letters,
-                                  </p>
+                                  “I hired this FS Event management team to plan my daughter’s sweet 16 party, and I was blown away by their creativity and attention to detail. They took my daughter’s vision and turned it into a stunning reality, with beautiful decor, delicious food, and fun activities for all the guests. The party was a huge success, and my daughter and her friends are still talking about it! I couldn’t have asked for a better event management team to bring my daughter’s dream party to life. Thank you so much for making it a night to remember!”                                  </p>
                                 </div>
                               </div>
                             </div>
@@ -446,6 +359,8 @@ export const Home = () => {
                         </div>
                       </div>
                     </div>
+                    <br>
+                    </br>
                     <a
                       class="carousel-control-prev"
                       href="#myCarousel"
@@ -472,11 +387,10 @@ export const Home = () => {
                     </a>
                   </div>
                 </div>
-              </div>
             </div>
           </div>
-        
-        
+        </div>
+        </div>
       
     </>
   );

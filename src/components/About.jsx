@@ -1,96 +1,85 @@
-import React from "react";
+import React,{useEffect} from 'react'
 import { Link } from "react-router-dom";
 import { Headers } from "./Headers";
 import { Team } from "./Team";
 
+
+
 export const About = (props) => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
   return (
     <>
       <Headers title="About Us"/>
+      
       <div className="container-fluid py-5">
         <div className="container">
             <div className="row align-items-center pb-1">
-                <div className="col-lg-5">
-                    <img className="img-thumbnail p-3" src="/img/3.jpg" alt=""/>
-                </div>
-                <div className="col-lg-7 mt-5 mt-lg-0">
-                    <small className="bg-primary text-white text-uppercase font-weight-bold px-1">Who We Are</small>
-                    <h1 className="mt-2 mb-4">Most Effective Creative Service Provider For Companies</h1>
-                    <p className="mb-4">Eirmod est dolor nonumy sea amet dolore erat sit dolor et dolor vero. Tempor ipsum at justo amet at ipsum justo. Aiam kasd sea sit dolor duo elitr dolor amet, justo est ipsum amet dolor ut ipsum. Labore diam et nonumy amet dolores. Volup sit labore dolores erat, magna justo sed lorem kasd ea dolor. Labore sit clita invidunt, est dolores lorem sed ipsum kasd no amet ipsum.</p>
-                    <a to="" className="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold">Read More</a>
-                </div>
-            </div>
-            <div className="row mt-4">
-                <div className="col-md-4">
-                    <div className="d-flex align-items-center border mb-4 mb-lg-0 p-4" style={{height: "120px"}}>
-                        <i className="fa fa-2x fa-map-marker-alt text-primary mr-3"></i>
-                        <div className="d-flex flex-column">
-                            <h5 className="font-weight-bold">Our Office</h5>
-                            <p className="m-0">123 Street, New York, USA</p>
-                        </div>
-                    </div>
-                </div>
-                <div className="col-md-4">
-                    <div className="d-flex align-items-center border mb-4 mb-lg-0 p-4" style={{height: "120px"}}>
-                        <i className="fa fa-2x fa-envelope-open text-primary mr-3"></i>
-                        <div className="d-flex flex-column">
-                            <h5 className="font-weight-bold">Email Us</h5>
-                            <p className="m-0">info@example.com</p>
-                        </div>
-                    </div>
-                </div>
 
-                <div className="col-md-4">
-                    <div className="d-flex align-items-center border mb-4 mb-lg-0 p-4" style={{height: "120px"}}>
-                        <i className="fas fa-2x fa-phone-alt text-primary mr-3"></i>
-                        <div className="d-flex flex-column">
-                            <h5 className="font-weight-bold">Call Us</h5>
-                            <p className="m-0">+012 345 6789</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+
+                    <center><h1 className="mt-2 mb-4" style={{ fontSize: '100px' }}>Who Are We</h1></center>
+                    <div class="d-flex align-items-center mb-4 wow fadeIn" data-wow-delay="0.6s">
+
+                    <p className="mb-4">Whether you’re a seasoned event organizer or putting together an event for the first time, a professional event planner goes a long way to making sure your event is the best it can be.Our mission is to bring your vision to life and create an event that reflects your personality,style,and goals. V3 Events is able to plan small and large-scale events down to the minute details, meticulously organizing every aspect to make sure that your special day or night runs without a hitch. 
+Our trained and skilled event planners have the right expertise to make your event more spectacular with more than 15 years of full-time experience in the event management & Wedding Planning industry, we are serving our customers with the best possible services delivered at the best possible rates. We are a one stop hub for all your event & Wedding Planning related requirements. Starting from venue Selection hotels booking, hospitality, decor recommendation, catering, and celebrity management to entertainment options, we deal with everything which is required for making your event a memorable one. With years of experience in the industry, we have developed a deep understanding of what it takes to execute successful events, from corporate conferences and product launches to weddings and social gatherings. Our services include event planning, design and decor,vendor coordination,logistics management, and on-site coordination. Thank you for considering our event management services. We look forward to creating an unforgettable event with you!
+</p>
     </div>
+                </div>
+           </div>
+        </div>
     <div className="container-fluid pt-5 pb-2">
         <div className="container">
             <div className="row">
+
                 <div className="col-lg-6 mb-5">
-                    <small className="bg-primary text-white text-uppercase font-weight-bold px-1">Why Choose Us</small>
-                    <h1 className="mt-2 mb-3">25 Years Expereince</h1>
-                    <h4 className="font-weight-normal text-muted mb-4">Lorem ut kasd dolores elitr sed est duo ea ipsum justo diam, est erat lorem</h4>
+                    
+                    <h1 className="mt-2 mb-3">"From vision to reality - 15 years of event mastery"</h1>
+
+                    <h4 className="font-weight-normal text-muted mb-4">Experienced in managing events of all sizes for more than 15 years across the region."</h4>
                     <div className="list-inline mb-4">
-                        <p className="font-weight-semi-bold mb-2"><i className="fa fa-angle-right text-primary mr-2"></i>Lorem ut kasd dolores elitr</p>
-                        <p className="font-weight-semi-bold mb-2"><i className="fa fa-angle-right text-primary mr-2"></i>Jsto dolor lorem ipsum</p>
-                        <p className="font-weight-semi-bold mb-2"><i className="fa fa-angle-right text-primary mr-2"></i>Diama ipsum est dolor</p>
+
+                        <p className="font-weight-semi-bold mb-2"><i className="fa fa-angle-right text-primary mr-2"></i>Long-standing career in event management</p>
+                        <p className="font-weight-semi-bold mb-2"><i className="fa fa-angle-right text-primary mr-2"></i>Masterful event management skills</p>
+                        <p className="font-weight-semi-bold mb-2"><i className="fa fa-angle-right text-primary mr-2"></i>successful event management across a variety of industries</p>
                     </div>
-                    <Link to="" className="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold">Learn More</Link>
                 </div>
                 <div className="col-lg-6">
                     <div className="row">
                         <div className="col-sm-6 pb-1">
                             <div className="d-flex flex-column align-items-center border px-4 mb-4">
-                                <h2 className="display-3 text-primary mb-3" data-toggle="counter-up">25</h2>
+                            <div class="d-flex align-items-center mb-4 wow fadeIn" data-wow-delay="0.3s">
+
+                                <h2 className="display-3 text-primary mb-3" data-toggle="counter-up">15</h2>
                                 <h5 className="font-weight-bold mb-4">Years Expereince</h5>
+                            </div>
                             </div>
                         </div>
                         <div className="col-sm-6 pb-1">
+                        <div class="d-flex align-items-center mb-4 wow fadeIn" data-wow-delay="0.3s">
+
                             <div className="d-flex flex-column align-items-center border px-4 mb-4">
-                                <h2 className="display-3 text-primary mb-3" data-toggle="counter-up">225</h2>
+                                <h2 className="display-3 text-primary mb-3" data-toggle="counter-up">50</h2>
                                 <h5 className="font-weight-bold mb-4">SKilled Experts</h5>
                             </div>
                         </div>
-                        <div className="col-sm-6 pb-1">
-                            <div className="d-flex flex-column align-items-center border px-4 mb-4">
-                                <h2 className="display-3 text-primary mb-3" data-toggle="counter-up">1050</h2>
-                                <h5 className="font-weight-bold mb-4">Happy Clients</h5>
-                            </div>
                         </div>
                         <div className="col-sm-6 pb-1">
                             <div className="d-flex flex-column align-items-center border px-4 mb-4">
-                                <h2 className="display-3 text-primary mb-3" data-toggle="counter-up">2500</h2>
+                            <div class="d-flex align-items-center mb-4 wow fadeIn" data-wow-delay="0.3s">
+                                <h2 className="display-3 text-primary mb-3" data-toggle="counter-up">35</h2><br/>
+                                <h5 className="font-weight-bold mb-4">Happy Clients</h5>
+                            </div>
+                        </div>
+                        </div>
+                        <div className="col-sm-6 pb-1">
+                            <div className="d-flex flex-column align-items-center border px-4 mb-4">
+                            <div class="d-flex align-items-center mb-4 wow fadeIn" data-wow-delay="0.3s">
+
+                                <h2 className="display-3 text-primary mb-3" data-toggle="counter-up">82</h2>
                                 <h5 className="font-weight-bold mb-4">Complete Projects</h5>
                             </div>
+                        </div>
                         </div>
                     </div>
                 </div>

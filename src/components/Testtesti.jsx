@@ -10,7 +10,7 @@ export const Testtesti = () => {
        <div class="row">
           <div class="col-md-12">
              <div class="titlepage">
-                <h2>People Says About Farm</h2>
+                <h2>People Says About us</h2>
              </div>
           </div>
        </div>

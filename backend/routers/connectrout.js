@@ -8,12 +8,12 @@ router.get('/',(req,res)=>{
     res.send("hello world")
 })
 
-router.get('/about',(req,res)=>{
-    res.send("hello awspme")
 
-})
 
 router.post('/connectrout', [
+  body('name','enter a name').isAlpha(),
+    body('name','cant be empty').notEmpty(),
+    body('email','cant be empty').notEmpty(),
   body('email', 'Enter a valid email').isEmail(),
 ], async (req, res) => {
   const errors = validationResult(req);

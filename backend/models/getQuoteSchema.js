@@ -5,28 +5,32 @@ const getQuoteSchema=mongoose.Schema({
         type:String,
         required:true,
     },
-    mobile:{
-        type:Number,
-        required:true
-    },
     email:{
         type:String,
         required:true,
+    },
+    mobile:{
+        type:Number,
+        required:true
     },
     venue:{
         type:String,
         required: true
     },
-    sEvent:{
+    tEvent:{
         type:String,
+        required:true
+    },
+    budget:{
+        type:Number,
+        required:true
+    },
+    eDate:{
+        type:Date,
         required:true
     },
     nGuest:{
         type:String,
-        required:false
-    },
-    eDate:{
-        type:Date,
         required:true
     },
     comments:{
@@ -35,5 +39,5 @@ const getQuoteSchema=mongoose.Schema({
     }
 })
 
-const connects=mongoose.model('connect',getQuoteSchema)
+const connects=mongoose.model('getquotes',getQuoteSchema)
 module.exports=connects
